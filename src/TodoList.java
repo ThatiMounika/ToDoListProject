@@ -1,16 +1,18 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.stream.*;
 
 
-public class TodoList<list> {
+public class TodoList {
+    /**
     public static void main(String[] args) {
 
-        TodoList todo = new TodoList();
-        todo.display_menu();
+        TodoList tasks = new TodoList();
+        tasks.display_menu();
 
     }
+
+
 
     ArrayList<Task> list = new ArrayList<>();
     String task;
@@ -37,7 +39,7 @@ public class TodoList<list> {
                 System.out.println("*************");
                 System.out.println("Tasks to do are:");
                 for (Task l : list) {
-                    System.out.println(l.getName() +  "\t" + l.getLocalDate() + "\t");
+                    System.out.println(l.getTask_title() +  "\t" + l.getLocalDate() + "\t");
                     System.out.println("*************");
 
                 }
@@ -47,10 +49,10 @@ public class TodoList<list> {
                 //Adding new task
             case 2:
                 Scanner scanner = new Scanner(System.in);
-                Task taskDetails = new Task();
+                Task taskDetails = new Task(title, date, project);
 
                 System.out.println("Enter a task name");
-                taskDetails.setName(scanner.nextLine());
+                taskDetails.setTask_title(scanner.nextLine());
 
                 System.out.println("How many days to complete");
                 LocalDate date = LocalDate.now().plusDays(Long.parseLong(scanner.nextLine()));
@@ -58,13 +60,14 @@ public class TodoList<list> {
 
 
                 Scanner taskChoice = new Scanner(System.in);
+                System.out.println("Do you want to continue(Y/N)");
                 while (taskChoice.nextLine().trim().toLowerCase().equals("y")) {
                     try {
                         // Call method to add new tasks
                         System.out.println("Please add new Task");
                         System.out.println("\n");
-                        System.out.println("Do you want to continue(Y/N)");
-                        taskDetails.setName(taskChoice.nextLine());
+                      //  System.out.println("Do you want to continue(Y/N)");
+                        taskDetails.setTask_title(taskChoice.nextLine());
                         LocalDate date1 = LocalDate.now().plusDays(Long.parseLong(taskChoice.nextLine()));
 
                         taskDetails.setLocalDate(date);
@@ -80,10 +83,9 @@ public class TodoList<list> {
              //mark it as done
             case 3:
                 System.out.println("You picked option 3");
-                Scanner scanner1 = new Scanner(System.in);
-
-
-
+                Task taskStatus = new Task(title, date, project);
+                String done = null;
+                taskStatus.setStatus(done);
             break;
             //update the task
             case 4:
@@ -109,7 +111,10 @@ public class TodoList<list> {
         display_menu();
 
 
+
     }
+     **/
+
 }
 
 
