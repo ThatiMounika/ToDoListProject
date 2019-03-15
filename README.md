@@ -18,3 +18,5 @@ Enter an option
 6. By selcting option 6 you can save the list of tasks in the file.
 7. By selecting option 7 you can sort project by project or date.
 8. By selcting option 8 you can quit the application.
+
+![class diagram](Class diagram.png)
