@@ -1,54 +1,85 @@
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Task {
-    String task_title;
-    String name;
-    String status;
-    LocalDate localDate;
 
+public class Task implements Serializable
+{
+    private String project;
+    private String task_title;
+    private boolean status;
+    private LocalDate localDate;
 
+  public Task(String title, LocalDate date,String project)
+  {
+      this.project = project;
+      this.task_title = title;
+      this.localDate = date;
 
+  }
 
-    public String getName() {
-
-        return name;
-    }
-
-    public String getStatus() {
+    public boolean getStatus()
+    {
 
         return status;
     }
 
-    public LocalDate getLocalDate() {
+    public LocalDate getLocalDate()
+    {
 
         return localDate;
     }
 
-    public void setName(String name)
+    public void setStatus(boolean status)
     {
-        this.name = name;
+
+        this.status = true;
     }
 
-    public void setStatus(String status) {
-
-        this.status = status;
-    }
-
-    public void setLocalDate(LocalDate localDate) {
+    public void setLocalDate(LocalDate localDate)
+    {
 
         this.localDate = localDate;
     }
 
-    public String getTask_title() {
+    public String getTask_title()
+    {
 
         return task_title;
     }
 
-    public void setTask_title(String task_title) {
+    public void setTask_title(String task_title)
+    {
         this.task_title = task_title;
 
     }
 
-    public void remove(String nextLine) {
+
+    public String getProject()
+    {
+
+      return project;
     }
+
+    public void setProject(String project)
+    {
+        project = project;
+    }
+    public String isDone()
+    {
+        if(this.status==true)
+        {
+            return "Done";
+        }
+        return "Not done";
+    }
+
+
+    @Override
+    public String toString()
+    {
+
+        return project  + "\t" + task_title  + "\t due date:" + localDate+"\t" +isDone() ;
+    }
+
+
 }
