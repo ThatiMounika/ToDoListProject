@@ -30,32 +30,10 @@ public class Todo
         System.out.println("1) Show task list \n2) Add new task\n3) Mark it as done\n4) Update task\n5) Remove task\n6) Save\n7) Sort by project or date\n8) Quit" );
         System.out.println("Enter an option");
         int choice=0;
-        //choice = scanner.nextInt();
+        choice = scanner.nextInt();
         scanner.nextLine();
 
-        while (true)
-            {
-                display_menu();
-                try
-                {
-                    choice = scanner.nextInt();
-                    if(!(choice<=0|| choice>=7))
-                    {
-                        break;
-                    }
-
-
-                }
-                catch (Exception ex)
-                {
-                    System.out.println("Enter valid input");
-                }
-            }
-
-
-
-
-        //Switch statement with int data type
+          //Switch statement with int data type
 
         switch (choice)
         {
