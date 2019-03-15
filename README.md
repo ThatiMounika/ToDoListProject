@@ -19,4 +19,4 @@ Enter an option
 7. By selecting option 7 you can sort project by project or date.
 8. By selcting option 8 you can quit the application.
 
-![class diagram todolist](Class diagram todolist.png)
+![class diagram todolist](https://github.com/ThatiMounika/ToDoListProject/blob/smallbranch/Class%20diagram%20todolist.png)
